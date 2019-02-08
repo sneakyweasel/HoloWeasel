@@ -1,9 +1,10 @@
 # HoloWeasel
 
+Looking Glass and Three.js working example files
+
 ![HoloWeasel](./img/holoweasel.jpg "Holographic Weasel")
 
 *[Beech Marten](https://en.wikipedia.org/wiki/Beech_marten) from Brittany, France*
-Holoplay and Three.js working example files
 
 ## Three.js Holoplayer display
 
