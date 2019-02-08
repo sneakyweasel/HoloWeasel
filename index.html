@@ -3,7 +3,7 @@
 
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title>Brain Visualisation</title>
+  <title>Holographic Weasel</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
   <link href="/css/style.css" media="screen" rel="stylesheet" type="text/css" />
@@ -44,9 +44,12 @@
   <script src="js/CurlMesh.js"></script>
   <script src="js/RepelerMesh.js"></script>
   <script src="js/N2.js"></script>
+  <script src="js/WebGL.js"></script>
 
   <script>
-    /*      javascript:(function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();document.body.appendChild(stats.dom);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='//rawgit.com/mrdoob/stats.js/master/build/stats.min.js';document.head.appendChild(script);})()*/
+    if (WEBGL.isWebGLAvailable() === false) {
+      document.body.appendChild(WEBGL.getWebGLErrorMessage());
+    }
 
     var container, camera, scene, renderer, stats;
     var gem, gui;
@@ -161,6 +164,16 @@
       controls.zoomMultiplier = 1;
       controls.rotationSpeed = 3;
       controls.rotationDampening = .95;
+
+      // ORBIT CONTROLS
+      // controls = new THREE.OrbitControls(camera, renderer.domElement);
+      // //controls.addEventListener( 'change', render ); // call this only in static scenes (i.e., if there is no animation loop)
+      // controls.enableDamping = true; // an animation loop is required when either damping or auto-rotation are enabled
+      // controls.dampingFactor = 0.25;
+      // controls.screenSpacePanning = false;
+      // controls.minDistance = 100;
+      // controls.maxDistance = 500;
+      // controls.maxPolarAngle = Math.PI / 2;
 
       // RESIZE
       window.addEventListener('resize', onWindowResize, false);

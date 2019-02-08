@@ -14,6 +14,7 @@ Looking Glass and Three.js working example files
 - Everything should be linted / auto formatted
 - Stylesheet in SASS
 - Added block comments
+- Added WebGL support
 
 ## TODO
 
